@@ -15,7 +15,7 @@ end
 # ---------------------
 
 def HashArray
-    
+
     #stuff = {'name' => 'Zed', 'age' => 39, 'height' => 6 * 12 + 2}
     #stuff['city'] = "NY"
     #print "#{stuff}\n"
@@ -41,12 +41,22 @@ def HashArray
     abbrev['AR'] = 'Zaporizka Oblast`'
     abbrev['BO'] = 'Ternopilska Oblast`'
 
+    auto['Zaporizhzhia'] = 'AP'
+    auto['Ternopil`'] = 'BC'
+
+    # puts auto.keys
+
     puts '=' * 15
     puts "Номерний знак #{abbrev['AA']} -#{auto['Kyiv']}"
 
-    auto.each do |city, znak|
-        puts "У місті #{city} автомобільний знак має номер: #{znak}"
+    auto.each do |key, value|
+        abbr = abbrev[value]
+        puts "У місті #{key} автомобільний знак має номер: #{value}, а їхня область - #{abbr}"
     end
+
+    #auto.each do |abbrev, znak, cities|
+    #    puts "У #{abbrev} автомобільний знак має номер: #{znak}, а їх центр - #{auto.keys[cities.to_i]}"
+    # end
 
 end
 
