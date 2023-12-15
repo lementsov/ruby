@@ -1,3 +1,10 @@
+# require "./oop.rb"
 
+listProducts = ["макарони", "капуста квашена"]
 
-add(1, 2)
+puts listProducts
+
+listProducts.push("банан")
+
+puts listProducts
+    
